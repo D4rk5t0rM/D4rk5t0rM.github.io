@@ -63,7 +63,7 @@ These commands tell us that our linux machine has a blocksize of ``4096`` (every
 Some more interesting information you can read from this commad is that the root directory (eg: ``/``) is located on ``inode 2`` (which is normal and in most cases inode 2). Where as ``inode 11`` is the ``lost+found`` directory.
    - This is because inodes 1-10 are reserved for special purposes and the first ``user file`` is ``lost+found`` is ``inode 11``
 
-3) Another command that gives A LOT of information and is like the fsstat command is the ``sudo dumpe2fs -o blocksize=4096 /dev/sda1`` command. This command lists the information in a 2 collumn view and is in my opinion a bit less user friendly. Here too I'd suggest ping the command into ``less``
+3) Another command that gives A LOT of information and is like the fsstat command is the ``sudo dumpe2fs -o blocksize=4096 /dev/sda1`` command. This command lists the information in a 2 collumn view and is in my opinion a bit less user friendly. Here too I'd suggest pipe the command into ``less``
    - ``sudo dumpe2fs -o blocksize=4096 /dev/sda1 | less``
 
 ## Find files according to their inode
