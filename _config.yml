@@ -62,9 +62,6 @@ google_analytics:
 remote_theme: chrisbobbe/jekyll-theme-prologue
 collections: [sections]
 
-include:
- - _forensics
-
 # Sitemap
 plugins: 
   - jekyll-sitemap
