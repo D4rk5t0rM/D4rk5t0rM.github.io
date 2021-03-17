@@ -1,3 +1,8 @@
+In this lab we'll take a look at the basics of a forensics investigation.
+
+# disclaimer
+Not all tools/files/VMs/networks will be available. These are notes taken for labs duiring a course, so some stuff is copyright protected and can't be shared. Where possible I'll try to link the resources.
+
 # Commands:
 `lsblk` show drives (block devices) & mountpath in tree form
 `lsscsi` show scsi devices with names -didn't work on kali; worked on host linux

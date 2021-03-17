@@ -1,3 +1,8 @@
+In this lab we'll simulate the whole forensics process and try to recover some flags.
+
+# disclaimer
+Not all tools/files/VMs/networks will be available. These are notes taken for labs duiring a course, so some stuff is copyright protected and can't be shared. Where possible I'll try to link the resources.
+
 # Acquisition
 ## Stop the service & mask it
 ``sudo systemctl stop udisks2.service && sudo systemctl mask udisks2.service``

@@ -1,3 +1,8 @@
+In this lab we'll take a look at how partitioning is done.
+
+# disclaimer
+Not all tools/files/VMs/networks will be available. These are notes taken for labs duiring a course, so some stuff is copyright protected and can't be shared. Where possible I'll try to link the resources.
+
 # Forensics lab 2 - partitions:
 fdisk - mbr
 gdisk - GPT
