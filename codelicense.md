@@ -1,8 +1,8 @@
 ---
-layout: post
-title: License
-icon: fa-list
+title: LICENSE
+icon: fa-user
 order: 100
+auto-header: none
 ---
 
 # Everything on this website excluding the design & code of the website itself (the jekyll theme & auto builder) falls under the following license:
