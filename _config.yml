@@ -36,7 +36,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A blog about general tech, privacy, security & anything else that might interest me in the cyber space.
 author: Insert_Security
 email: 
-avatar: assets/images/avatar.png
+avatar: assets/images/avatar.jpg
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: "" # the subpath of your site, e.g. /blog
