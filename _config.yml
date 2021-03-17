@@ -39,7 +39,7 @@ email:
 avatar: assets/images/avatar.png
 
 # You'll want to customize url and baseurl for your own site:
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://d4rk5t0rm.github.io" # the base hostname & protocol for your site
 
 # Social settings
