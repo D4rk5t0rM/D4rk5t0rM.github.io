@@ -38,7 +38,7 @@ mount loop device:``sudo mount /dev/loop0 /mnt/loop0`` -> did not work; this is 
 
 ``sudo mount /dev/loop0p1 /mnt/loop0p1`` & ``sudo mount /dev/loop0p2 /mnt/loop0p2`` & ``sudo mount /dev/loop0p3 /mnt/loop0p3`` & keep doing this till all partitions have been mounted.
 
-# ---------------------------------
+--------------------------------
 
 # Analysing our own disk.
 Before we'll try to analyze the suspect's disk; we'll play around with our own disk (you can follow this too. I'm using a Kali linux 20.4 machine; but this should be possible on any other linux distro)
@@ -75,7 +75,7 @@ Some more interesting information you can read from this commad is that the root
 There is a tool called ``mkfs.ext4`` that will make an ext4 partition, but if we look at the man page of this tool we can see that it is actually the ``mke2fs`` tool that will make the partition. 
 If we look for the config file of this tool ``ls /etc | grep mke2fs`` we find the file ``/etc/mke2fs.conf`` in this file a small partition has a blocksize of ``1024 bytes`` and not ``512 bytes``
 
-# ---------------------------------
+--------------------------------
 
 # Capture the flag - Analysis of the suspect drive
 ## Disk layout
@@ -116,6 +116,6 @@ If we look for the config file of this tool ``ls /etc | grep mke2fs`` we find th
   - ``sudo xxd -l 512 /dev/loop0p2``
   - ``sudo dd if=/dev/loop0p2 of=bonus.zip bs=1024``
 
-# ---------------------------------
+--------------------------------
 # Resources
 * [Block device kernel documentation](https://www.kernel.org/doc/Documentation/admin-guide/devices.txt)

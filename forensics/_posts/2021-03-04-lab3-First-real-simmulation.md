@@ -35,7 +35,7 @@ Not all tools/files/VMs/networks will be available. These are notes taken for la
 
 ``sudo mount /dev/loop0p1 /mnt/loop0p1`` & ``sudo mount /dev/loop0p2 /mnt/loop0p2`` to mount both partitions
 
-# --------------------------------------
+-------------------------------------
 # Full Disk Analysis
 ## Have a look at your backup image and list all the active partitions therein using fdisk, parted
 and/or mmls (see previous lab)
@@ -49,7 +49,7 @@ loop0p1: FAT16; loop0p2: HPFS/NTFS/exFAT (probably NTFS)
 * Any other useful information from these tools?
   - mmls shows 2 unallocated spaces before and after the 2 partitions
 
-# -----------------------------------------
+----------------------------------------
 # FAT Partition analysis
 There are 3 flag on the FAT partition.
 

@@ -38,6 +38,8 @@ two commands to monitor what happens when you attach a disk:
 `udevadm monitor` & `udisksctl monitor`
 
 ## Stop the services:
+Stopping the services is important because if they are not stopped and the disk is mounted this will edit the md5 hash of the disk and this is a no-go in forensics.
+
 Stop the service via: `systemctl stop udisks2.service`
 prevent service from being starte via any other process: `systemctl mask udisks2.service`
 
