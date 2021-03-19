@@ -111,7 +111,7 @@ If we look for the config file of this tool ``ls /etc | grep mke2fs`` we find th
   - ``sudo strings /dev/loop0p3``
 
 # Bonus round - 1 More flag
-- Bonsu Flag: Using ``xxd`` on ``/dev/loop0p2`` we see a referense to a file called ``bonus-flag.txt`` looking a bit beore that, we can see the magic byte ``PK`` this is a ZIP file. Now that we know that we can start extracting the file. Using ``dd`` command we can give the input file as our loopback partition, we don't need an offset because the hidden file is at the start of the partition. Our output file we'll call ``bonus.zip`` and what is very important is giving the right blocksize; we've determined the blocksize already and that's ``1024`` here. By default ``dd`` will read 512 bytes, for us this is no porblem, we checked with ``xxd`` and the file stops before the 512bytes. When the zip file is recovered we can extract it and read the flag from the text file: ``FLG-55798123``
+- Bonsu Flag: Using ``xxd`` on ``/dev/loop0p2`` we see a referense to a file called ``bonus-flag.txt`` looking a bit beore that, we can see the [magic byte](https://en.wikipedia.org/wiki/List_of_file_signatures) ``PK`` this is a ZIP file. Now that we know that we can start extracting the file. Using ``dd`` command we can give the input file as our loopback partition, we don't need an offset because the hidden file is at the start of the partition. Our output file we'll call ``bonus.zip`` and what is very important is giving the right blocksize; we've determined the blocksize already and that's ``1024`` here. By default ``dd`` will read 512 bytes, for us this is no porblem, we checked with ``xxd`` and the file stops before the 512bytes. When the zip file is recovered we can extract it and read the flag from the text file: ``FLG-55798123``
   - commands used:
   - ``sudo xxd -l 512 /dev/loop0p2``
   - ``sudo dd if=/dev/loop0p2 of=bonus.zip bs=1024``
@@ -119,3 +119,4 @@ If we look for the config file of this tool ``ls /etc | grep mke2fs`` we find th
 --------------------------------
 # Resources
 * [Block device kernel documentation](https://www.kernel.org/doc/Documentation/admin-guide/devices.txt)
+* [list of file signatures/magic bytes](https://en.wikipedia.org/wiki/List_of_file_signatures)
