@@ -19,7 +19,7 @@ We believe that one of the initial footholds for the Adversary was the HMI in th
 > A lot of these types of devices work on the MODBUS/TCP portocol (TCP/502).
 > Now that we know this we can look in the wireshark capture and use this as display filter: `tcp.port == 502`. Using the conversation view (`statistics > conversations > IPv4 > Limit to display filter`) we can find all the conversations that use MODBUS/TCP (HMI & PLC devices).
 
-![[Wireshark-Modbus-conversation.png]]
+![](./assets/Wireshark-Modbus-conversation.png)
 		
 - What is the IP address of the HMI?
 	- `statistics > Endpoints > IPv4 > Limit to display filter` the one with the most packets + corolating with the conversations gives us:
@@ -31,7 +31,7 @@ We believe that one of the initial footholds for the Adversary was the HMI in th
 - While the HMI should have only been monitoring the battery network, we've noticed some suspect industrial traffic. Can you investigate and determine what devices were targeted?
 	- Input the IP address(es), separated with ";".
 	- `10.10.10.63;10.10.10.64;10.10.10.65;10.10.10.66;10.10.10.67;10.10.10.68;10.10.10.69`
-![[ModbusFunctionCodes.png]]
+![](./assets/ModbusFunctionCodes.png)
 
 ## Question 2: Solar Network
 The ICS Solar Network monitors the Microgrid’s solar power generation capability. The process monitors the solar inverters which provides details about the health of the system and the amount of power being generated. There appears to have been a PLC program change around the time of the incident.
