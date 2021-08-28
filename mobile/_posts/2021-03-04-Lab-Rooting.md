@@ -20,8 +20,8 @@ In this lab you will root an android emulator.
 
 ## How to boot the emulator
   - Execute the following command:
-    - $**~/Android/Sdk/emulator/emulator** -avd **My-first-emulator** -writable-system -selinux disabled -qemu -enable-kvm
-    - Please replace the **bold** content with the exact **path** and **emulator name**.
+    - `$**~/Android/Sdk/emulator/emulator** -avd **My-first-emulator** -writable-system -selinux disabled -qemu -enable-kvm`
+    - Please replace the **bold** (`** <text> **`) content with the exact **path** and **emulator name**.
   - The emulator should pop up.
  
 
@@ -54,14 +54,14 @@ The challenge of this lab is to make them concrete.
       - If remount does not work, try to use the ./adb remount command in the platfom-tools folders (see Prerequisites)
     - Install rootchecker.apk (see Leho for download).
       - Donwload from Leho
-      - **adb install /path/to/rootchecker.apk**
+      - `adb install /path/to/rootchecker.apk`
     - Verify that your are not root yet!
       - **open rootchecker, skip al steps, click verify root**
     - Clone the https://github.com/0xFireball/root_avd on the host
     - Install Superuser.apk (find it in root_avd/SuperSU/common) on the emulator.
-      - **adb install root_avd/SuperSU/common/Superuser.apk***
-    - Push the SuperSU/x86/su to /system/xbin/su
-      - **adb push root_avd/SuperSU/x86/su /system/xbin/su**
+      - `adb install root_avd/SuperSU/common/Superuser.apk`
+    - Push the `SuperSU/x86/su` to `/system/xbin/su`
+      - `adb push root_avd/SuperSU/x86/su /system/xbin/su`
       - What is the main difference between the x86/su and the Superuser.apk?
         - **Superuser.apk is just a verification apk that monitors other apps that are trying to get root access**
       - What is the goal of these two different things? (Think about it while completing the lab).
@@ -70,9 +70,9 @@ The challenge of this lab is to make them concrete.
       - Errors can be ignored.
       - Don't reboot but tab ok.
     - We need to add persmissions to our new su.
-      - adb shell chmod 0755 /system/xbin/su **// extra permissions**
-      - adb shell setenforce 0 **// disable firewall**
-      - adb shell su --install **// install the su comman**
-      - adb shell su --daemon & **// This command will Run SuperSU’s su as daemon.**
+      - `adb shell chmod 0755 /system/xbin/su` **// extra permissions**
+      - `adb shell setenforce 0` **// disable firewall**
+      - `adb shell su --install` **// install the su comman**
+      - `adb shell su --daemon &` **// This command will Run SuperSU’s su as daemon.**
       - Describe for each step the purpose (research it).
     - See the section (how to test) to see if the lab succeeded.

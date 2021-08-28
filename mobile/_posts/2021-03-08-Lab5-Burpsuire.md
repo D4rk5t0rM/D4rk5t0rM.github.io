@@ -1,0 +1,31 @@
+# Welcome - Lab 5
+
+## Prerequisites
+* Android Studio
+* Burp Suite
+
+## Goal
+
+There is an APK on Leho with 3 HTTP vulnerabilities. Using Burp Suite and intercepting should be adequate to find the 3 vulnerabilities.
+
+**Solution:**
+*Set up the burp suite proxy, exactly like in the class recording
+
+## Bug 1 (easiest)
+Look for data disclosure
+
+
+## Bug 2 (easy)
+Look for an IDOR
+
+**Solution:**
+* http://188.166.31.208/lab5/userinfo.php?user=1
+* change 1 to 2, etc
+
+## Bug 3 (medium)
+Locate a .gitignore file on the server and try to find more information about the server
+
+**Solution:**
+* http://188.166.31.208/lab5/.gitignore
+* ->
+* http://188.166.31.208/lab5/test.php
